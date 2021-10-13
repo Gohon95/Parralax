@@ -11,10 +11,10 @@
     <header>
     <a href="#" class="logo">Logo</a>
     <ul>
-      <li></li><a href="#" class="active">Home</a></li>
-      <li></li><a href="#">About</a></li>
-      <li></li><a href="#">Website</a></li>
-      <li></li><a href="#">Contact</a></li>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Website</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
     </header>
     <section>
@@ -22,7 +22,28 @@
         <img src="images/moon.png" id="moon">
         <img src="images/mountains_behind.png" id="mountains_behind">
         <h2 id="text">Moon Light</h2>
+        <a href="#sec" class="btn">Explore</a>
         <img src="images/mountains_front.png" id="mountains_behind">
-    </section>   
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum <br><br></p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_fornt = document.getElementById('mountains_front');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.05 + 'px';
+        })
+    </script>
 </body>
 </html>
