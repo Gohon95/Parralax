@@ -65,6 +65,7 @@ section
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 section::before
 {
@@ -100,7 +101,7 @@ section img#mountains_front
   white-space: nowrap;
   font-size: 7.5vw;
   z-index: 0;
-  transform: translateY(100px);
+  transform: translateX(600px);
 }
 .btn
 {
@@ -112,6 +113,7 @@ section img#mountains_front
     color: #2b1055;
     font-size: 1.5em;
     z-index: 9;
+    transform: translateY(100px);
 }
 .sec
 {

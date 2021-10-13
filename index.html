@@ -12,7 +12,7 @@
     <a href="#" class="logo">Logo</a>
     <ul>
       <li><a href="#" class="active">Home</a></li>
-      <li><a href="#">About</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#">Website</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
@@ -29,20 +29,40 @@
         <h2>Parallax Scrolling Effects</h2>
         <p>Lorem ipsum <br><br></p>
     </div>
+    <div class="sec" id="about">
+        <h2>About</h2>
+        <p>"But I must explain to you how all this mistaken idea of denouncing pleasure 
+            and praising pain was born and I will give you a complete account of the system, 
+            and expound the actual teachings of the great explorer of the truth, the master-builder 
+            of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, 
+            but because those who do not know how to pursue pleasure rationally encounter consequences that 
+            are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain 
+            of itself, because it is pain, but because occasionally circumstances occur in which toil and pain 
+            can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious 
+            physical exercise, except to obtain some advantage from it? But who has any right to find fault with a 
+            man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces 
+            no resultant pleasure?" <br><br></p>
+    </div>
 
     <script>
         let stars = document.getElementById('stars');
         let moon = document.getElementById('moon');
         let mountains_behind = document.getElementById('mountains_behind');
         let text = document.getElementById('text');
-        let btn = document.getElementById('btn');
+        let btn = Array.from(document.getElementsByClassName('btn'));
         let mountains_fornt = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
 
         window.addEventListener('scroll', function(){
             let value = window.scrollY;
             stars.style.left = value * 0.25 + 'px';
             moon.style.top = value * 1.05 + 'px';
-            mountains_behind.style.top = value * 0.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_behind.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn[0].style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
         })
     </script>
 </body>
